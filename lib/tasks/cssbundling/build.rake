@@ -43,7 +43,7 @@ module Cssbundling
       case
       when File.exist?('bun.lockb') then :bun
       when File.exist?('yarn.lock') then :yarn
-      when File.exists('package-lock.json') then :npm
+      when File.exist?('package-lock.json') then :npm
       when tool_exists?('bun') then :bun
       when tool_exists?('yarn') then :yarn
       when tool_exists?('npm') then :npm
